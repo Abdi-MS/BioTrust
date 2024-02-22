@@ -14,40 +14,39 @@
       rel="stylesheet"
       crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="icon" href="favicon.png" />
 
-
-<!-- 
+    
     <style>
+      
       .dropdown-contact {
-          display: flex;
-          align-items: center; /* Vertically center items */
-          padding: 10px; /* Add padding for better appearance */
+          /* display: flex; */
+          /* align-items: center; */
+          /* padding: 10px;  */
       }
   
-      .nonimg {
-          margin-left: 10px; /* Add margin to separate image and text */
-      }
+      /* .nonimg {
+          margin-left: 10px; 
+      } */
   
-      .nonimg span {
-          display: block; /* Make spans block-level for stacking */
-          margin-bottom: 5px; /* Add margin between spans */
-      }
+      /* .nonimg span {
+          display: block; 
+          margin-bottom: 5px; 
+      } */
   
-      .nonimg button {
-          margin-top: 5px; /* Add margin on top of the button */
-      }
+      /* .nonimg button {
+          margin-top: 5px;
+      } */
   
-      .dropdown-contact img {
-          display: block; /* Set image to block to ensure it does not collapse with other elements */
-          max-width: 100px; /* Set a maximum width for the image */
-          height: auto; /* Maintain aspect ratio */
-      }
-  </style> -->
-
-
-
+      /* .dropdown-contact img {
+          display: block; 
+          max-width: 100px; 
+          height: auto;
+      } */
+  </style>
   </head>
 
   <body>
@@ -63,7 +62,7 @@
             width="30"
             height="24"
             class="d-inline-block align-text-top" />
-          <a class="navbar-brand" href="#"></a>
+          <a class="navbar-brand" href="#">
             EVERY ORDER CAN HELP END CHILD HUNGER
           </a>
         </div>
@@ -77,28 +76,36 @@
               <span class="dropbtn">Customer Support</span>
               <div class="dropdown-content">
                 <span class="dropdown-header">How can we help you?</span>
-                <div class="dropdown-contact">
-                  <img src="/BioTrust_Assets/NavBarIcon.png"/>
-                  <div class="nonimg">
-                    <span>24/7 CHAT</span>
-                    <span>Get help now from Aidan, your BioTRUST product expert</span>
-                    <button type="button" class="btn btn-success">Chat Now</button>
+                <div>
+                  <div class="dropdown-contact">
+                    <img src="/BioTrust_Assets/NavBarIcon.png" />
+                    <div class="nonimg">
+                      <span>24/7 CHAT</span>
+                      <span>
+                        Get help now from Aidan, your BioTRUST product expert
+                      </span>
+                      <button type="button" class="btn btn-success">
+                        Chat Now
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div class="dropdown-contact">
-                  <img src="/BioTrust_Assets/NavBarIcon.png"/>
-                  <div class="nonimg">
-                    <span>Questions?</span>
-                    <span>Get Answers by visiting the help center</span>
-                    <button type="button" class="btn btn-success">Chat Now</button>
+                <div>
+                  <div class="dropdown-contact">
+                    <img src="/BioTrust_Assets/NavBarIcon.png" />
+                    <div class="nonimg">
+                      <span>Questions?</span>
+                      <span>Get Answers by visiting the help center</span>
+                      <button type="button" class="btn btn-success">
+                        Chat Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="dropdown">
-              <span class="dropbtn">
-                My Account
-              </span>
+              <span class="dropbtn">My Account</span>
               <div class="dropdown-content">
                 <a class="dd-link" href="#">Purchase History</a>
                 <a class="dd-link" href="#">Manage Subscription</a>
@@ -113,5 +120,30 @@
       </div>
     </nav>
 
+    <!-- Second NavBar -->
+
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="flex-row">
+          <a class="navbar-brand" href="#">
+            <img
+              class="sec-NB-img"
+              src="/BioTrust_Assets/biotrustSecondNavBarLogo.avif"
+              alt="Logo"
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top" />
+          </a>
+          <button type="button" class="btn btn-primary btn-lg sec-NB-Button">SHOP</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg sec-NB-Button">QUALITY</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg sec-NB-Button">MISSION</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg sec-NB-Button">BIOTRUST</button>
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
   </body>
 </html>
