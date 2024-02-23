@@ -1,8 +1,8 @@
-* {
+/* * {
   border-radius: 1px;
   border: solid;
   border-color: black;
-}
+} */
 
 .use-flex {
   display: flex;
@@ -147,20 +147,29 @@ nonimg button {
 .contact-green-text {
   color: green;
   justify-self: left;
-  font-family: "helvetica";
+  font-family: var(
+    --font-stack-header,
+    "Lato",
+    "HelveticaNeue",
+    "Helvetica Neue",
+    sans-serif
+  );
   font-size: 20px;
+  font-style: normal;
 }
 
 .contact-sub-text {
   color: white;
-  font-size: 20px;
+  font-size: 13.5px;
 }
 
 .custom-button {
   background-color: rgb(43, 179, 77);
+  color: white;
   font-size: 14px;
-  padding: 5px 8px;
+  padding: 5px 16px;
   margin: 5px 5px 5px 25%;
+  border-radius: 8px;
 }
 
 .no-border {
