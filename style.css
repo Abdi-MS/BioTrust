@@ -29,6 +29,7 @@
 .dropdown-contact {
   display: flex;
   align-items: center;
+  padding:5px;
   margin: 0px 0px 5px 0px;
   border: solid;
   border-width: 0px 0px 1px 0px;
@@ -36,7 +37,7 @@
 }
 
 .nonimg {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .nonimg span {
@@ -142,10 +143,12 @@ nonimg button {
 
 .dropdown-header {
   border: #33659e;
+  font-size: 22px;
+  text-align: center;
 }
 
 .contact-green-text {
-  color: green;
+  color: #2bb34d;
   justify-self: left;
   font-family: var(
     --font-stack-header,
