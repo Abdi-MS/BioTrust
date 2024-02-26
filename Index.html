@@ -45,6 +45,7 @@
       ];
 
       let prodCarouselCounter = 0;
+      let customerGalleryCounter = 0;
 
       function scrollProdCarouselUp() {
         prodCarouselCounter--;
@@ -52,7 +53,7 @@
           prodCarouselCounter = imgLinkArr.length + prodCarouselCounter;
         }
         console.log("counter is >>>", prodCarouselCounter);
-        updateImageLinks();
+        updateProdImageLinks();
         return prodCarouselCounter;
       }
 
@@ -62,11 +63,27 @@
           prodCarouselCounter = prodCarouselCounter % imgLinkArr.length;
         }
         console.log("counter is >>>", prodCarouselCounter);
-        updateImageLinks();
+        updateProdImageLinks();
         return prodCarouselCounter;
       }
 
-      function updateImageLinks() {
+      function scrollCustomerGalleryLeft() {
+        customerGalleryCounter--;
+        if (customerGalleryCounter < 0) {
+          customerGalleryCounter = customerGalleryCounter + 14;
+        }
+        updateCustomerGalleryLinks();
+      }
+
+      function scrollCustomerGalleryRight() {
+        customerGalleryCounter++;
+        if (customerGalleryCounter < 0) {
+          customerGalleryCounter = customerGalleryCounter % 14;
+        }
+        updateCustomerGalleryLinks();
+      }
+
+      function updateProdImageLinks() {
         for (var i = 0; i < 5; i++) {
           var img = document.getElementById(`prod-carousel-img-${i + 1}`);
           var index = (prodCarouselCounter + i) % imgLinkArr.length;
@@ -75,6 +92,15 @@
           img.src = imgLinkArr[index];
         }
       }
+
+      function updateCustomerGalleryLinks(){
+        for(var i = 0; i<5; i++){
+          var img = document.getElementById(`CustomerGallerySlot${i}`);
+          index = (customerGalleryCounter + i) % 15;
+          img.src = `/BioTrust_Assets/customers/img${index}`
+        }
+      }
+
     </script>
 
     <style>
@@ -285,20 +311,20 @@
         </div>
       </div>
       <div class="packages wrap-flex">
-          <div class="package-choice wrap-flex margin-wrapper" >
-            <div class="package-choice-text">
-              <h3>Choose Your Package</h3>
-              <span>Select your money-saving option below:</span>
-            </div>
-            <div class="package-choice-btns">
-              <button class="package-choice-btn" id="left-btn">
-                One-Time Purhcase
-              </button>
-              <button class="package-choice-btn" id="right-btn">
-                Subscribe & Save 40%
-              </button>
-            </div>
+        <div class="package-choice wrap-flex margin-wrapper">
+          <div class="package-choice-text">
+            <h3>Choose Your Package</h3>
+            <span>Select your money-saving option below:</span>
           </div>
+          <div class="package-choice-btns">
+            <button class="package-choice-btn" id="left-btn">
+              One-Time Purhcase
+            </button>
+            <button class="package-choice-btn" id="right-btn">
+              Subscribe & Save 40%
+            </button>
+          </div>
+        </div>
         <div class="margin-wrapper">
           <div class="package-options">
             <div class="offer popular-offer">
@@ -337,7 +363,46 @@
             </div>
           </div>
         </div>
-        <div class="customer-gallery"></div>
+        <div class="customer-gallery">
+          <div class="customer-gallery-text"></div>
+          <div class="customer-gallery-images use-flex">
+            <img
+              id="left-arrow"
+              class="low-opacity"
+              onclick="scrollCustomerGalleryLeft()"
+              src="/BioTrust_Assets/customers/left-arrow" />
+            <div class="customer-gallery-image-container">
+              <img
+                id="CustomerGallerySlot0"
+                src="/BioTrust_Assets/customers/img0" />
+            </div>
+            <div class="customer-gallery-image-container">
+              <img
+                id="CustomerGallerySlot1"
+                src="/BioTrust_Assets/customers/img1" />
+            </div>
+            <div class="customer-gallery-image-container">
+              <img
+                id="CustomerGallerySlot2"
+                src="/BioTrust_Assets/customers/img2" />
+            </div>
+            <div class="customer-gallery-image-container">
+              <img
+                id="CustomerGallerySlot3"
+                src="/BioTrust_Assets/customers/img3" />
+            </div>
+            <div class="customer-gallery-image-container">
+              <img
+                id="CustomerGallerySlot4"
+                src="/BioTrust_Assets/customers/img4" />
+            </div>
+            <img
+              id="right-arrow"
+              class="low-opacity"
+              onclick="scrollCustomerGalleryRight()"
+              src="/BioTrust_Assets/customers/right-arrow" />
+          </div>
+        </div>
       </div>
       <div class="Cards"></div>
     </div>

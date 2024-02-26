@@ -20,6 +20,10 @@
   flex-wrap: wrap;
 }
 
+.low-opacity{
+  opacity: 0.4;
+}
+
 /* 
 .skeleton {
   flex-wrap: wrap;
@@ -224,33 +228,33 @@ textarea:focus {
 .images {
   flex-grow: 0;
   margin-left: 100px;
-  height: 700px;
+  height: max-content;
 }
 
 .carousel {
   width: 105px;
-  height: 700px;
+  height: max-content;
 }
 
 .product {
   width: max-content;
-  height: 700px;
+  height: max-content;
 }
 
 .name {
   width: 500px;
-  height: 15%;
+  height: max-content;
 }
 
 .rating {
   width: 500px;
-  height: 10%;
+  height: 70px;
 }
 
 .big-image {
   display: flex;
   width: 500px;
-  height: 75%;
+  height: max-content;
   justify-content: center;
   align-items: center;
 }
@@ -312,11 +316,11 @@ textarea:focus {
 }
 
 .package-choice-btns {
-  height: 25%;
+  height: max-content;
 }
 
 .customer-gallery {
-  height: 35%;
+  height: max-content;
 }
 
 .package-choice {
@@ -396,20 +400,20 @@ textarea:focus {
 }
 
 .offer .head1 {
-  font-size: 30px;
+  font-size: 34px;
   color: #0d4f9a;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bolder;
 }
 
 .offer .head2 {
-  font-size: 24px;
+  font-size: 23px;
   color: #0d4f9a;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
 .offer .price-cancelled {
-  font-size: 30px;
+  font-size: 25px;
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bold;
@@ -417,21 +421,21 @@ textarea:focus {
 }
 
 .offer .price-actual {
-  font-size: 30px;
+  font-size: 36px;
   color: #2bb34d;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bolder;
 }
 
 .offer .savings {
-  font-size: 24px;
+  font-size: 20px;
   color: red;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
 
 .offer .shipping {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bold;
@@ -465,4 +469,23 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.customer-gallery-images{
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-gallery-images img{
+  max-width: 145px;
+  max-height: 145px;
+}
+
+#left-arrow, #right-arrow{
+  max-height: 110px !important;
+} 
+
+.customer-gallery-image-container{
+  width: 145px;
+  height:145px;
 }
