@@ -18,7 +18,8 @@
 } */
 
 .right-half {
-  margin-right: 20px;
+  margin-right: 40px;
+  padding: 0px, 40px;
 }
 
 .search-bar-form {
@@ -29,7 +30,7 @@
 .dropdown-contact {
   display: flex;
   align-items: center;
-  padding:5px;
+  padding: 5px;
   margin: 0px 0px 5px 0px;
   border: solid;
   border-width: 0px 0px 1px 0px;
@@ -47,7 +48,7 @@
 
 .navbar-color,
 .navbar-color a {
-  background-color: #33659e;
+  background-color: #2b527e;
   color: white;
 }
 
@@ -74,7 +75,7 @@ nonimg button {
 
 .left-half img {
   object-fit: cover;
-  max-height: 25px;
+  max-height: 35px;
   width: auto;
 }
 
@@ -87,8 +88,9 @@ nonimg button {
 }
 
 .dropdown {
-  position: relative;
+  position: static;
   display: inline;
+  padding: 0px, 200px;
 }
 
 .dropdown-content {
@@ -115,11 +117,15 @@ nonimg button {
   display: block;
 }
 
-.dropdown-contact:hover,
-.dropdown-contact:hover > *,
 .dd-link:hover {
-  background-color: #2b527e;
-  color: #b1b1b1;
+  background-color: #2771c5;
+  color: white;
+}
+
+.dd-link {
+  border: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #33659e;
 }
 
 .dropdown:hover .dropdown-content {
@@ -145,6 +151,9 @@ nonimg button {
   border: #33659e;
   font-size: 22px;
   text-align: center;
+  border: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #33659e;
 }
 
 .contact-green-text {
@@ -189,6 +198,7 @@ nonimg button {
   background-color: white;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  margin-right: 40px;
 }
 
 .search-bar,
@@ -197,7 +207,10 @@ textarea:focus {
   height: 34px;
   border-right-width: 0px;
   border-color: black;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   outline: none;
+  padding-left: 10px;
 }
 
 .images {
@@ -207,8 +220,7 @@ textarea:focus {
 }
 
 .carousel {
-  padding: 25% 0% 0% 0%;
-  width: 150px;
+  width: 105px;
   height: 700px;
 }
 
@@ -236,10 +248,41 @@ textarea:focus {
 }
 
 .carousel img {
-  max-width: 150px;
+  max-width: 105px;
 }
 
 .big-image img {
   max-width: 500px;
   height: auto;
 }
+
+#prod-carousel-up-arrow,
+#prod-carousel-down-arrow {
+  max-width: 80px;
+  height: auto;
+  opacity: 0.6;
+  margin-left: 9px;
+}
+
+#prod-carousel-up-arrow:hover,
+#prod-carousel-down-arrow:hover {
+  opacity: 0.9;
+}
+
+.carousel-image-holder{
+  width: 105px;
+  height: 105px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15px;
+  border-top-width: 12px;
+  border-bottom-width: 1px;
+  border-color: rgb(71, 71, 71);
+}
+
+
+/* .dd-content-container{
+  background: none;
+  padding-right: 400px;
+} */

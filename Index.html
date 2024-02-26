@@ -26,9 +26,56 @@
     <link rel="icon" href="favicon.png" />
 
     <script>
-      function switchMainImage(smallImg){
+      function switchMainImage(smallImg) {
         var img = document.getElementById("carousel-big-img");
         img.src = smallImg.src;
+      }
+
+      let imgLinkArr = [
+        "/BioTrust_Assets/flavors/unflavored.webp",
+        "/BioTrust_Assets/flavors/unflavored-sticks.webp",
+        "/BioTrust_Assets/flavors/chocolate.webp",
+        "/BioTrust_Assets/flavors/vanilla.webp",
+        "/BioTrust_Assets/flavors/fruitPunch.webp",
+        "/BioTrust_Assets/flavors/unflavored-info.avif",
+        "/BioTrust_Assets/flavors/unflavored-sticks-info.webp",
+        "/BioTrust_Assets/flavors/chocolate-info.webp",
+        "/BioTrust_Assets/flavors/vanilla-info.avif",
+        "/BioTrust_Assets/flavors/fruitPunch-info.webp",
+      ];
+
+      let prodCarouselCounter = 0;
+
+      function scrollProdCarouselUp() {
+        console.log("called up");
+        prodCarouselCounter--;
+        if (prodCarouselCounter < 0) {
+          prodCarouselCounter = prodCarouselCounter % imgLinkArr.length;
+        }
+        updateImageLinks();
+        console.log("counter is >>>", prodCarouselCounter);
+        return prodCarouselCounter;
+      }
+
+      function scrollProdCarouselDown() {
+        console.log("called down");
+        prodCarouselCounter++;
+        if (prodCarouselCounter >= imgLinkArr.length) {
+          prodCarouselCounter = prodCarouselCounter % imgLinkArr.length;
+        }
+        updateImageLinks();
+        console.log("counter is >>>", prodCarouselCounter);
+        return prodCarouselCounter;
+      }
+
+      function updateImageLinks() {
+        for (var i = 0; i < 5; i++) {
+          var img = document.getElementById(`prod-carousel-img-${i+1}`);
+          console.log(img.src);
+          var index = (prodCarouselCounter + i) % imgLinkArr.length;
+          console.log("assigning image >>> ", imgLinkArr[index]);
+          img.src = imgLinkArr[index];
+        }
       }
     </script>
 
@@ -61,14 +108,14 @@
   </head>
 
   <body>
-    <!-- Navbar Here -->
+    <!-- 1st Navbar Here -->
     <nav class="navbar navbar-expand-lg navbar-color">
       <div class="container-fluid">
         <!-- Left part of navbar -->
 
         <div class="flex-row left-half">
           <img
-            src="/BioTrust_Assets/NavBarIcon.png"
+            src="/BioTrust_Assets/NavBarIcon1.png"
             alt="Logo"
             class="d-inline-block align-text-top" />
           <a class="navbar-brand" href="#">
@@ -83,33 +130,35 @@
 
             <div class="dropdown">
               <span class="dropbtn">Customer Support</span>
-              <div class="dropdown-content">
-                <span class="dropdown-header">How can we help you?</span>
-                <div>
-                  <div class="dropdown-contact">
-                    <img src="/BioTrust_Assets/NavBarIcon.png" />
-                    <div class="nonimg">
-                      <span class="contact-green-text">24/7 CHAT</span>
-                      <span class="contact-sub-text">
-                        Get help now from Aidan, your BioTRUST product expert
-                      </span>
-                      <button type="button" class="custom-button no-border">
-                        Chat Now
-                      </button>
+              <div class="dd-content-container">
+                <div class="dropdown-content">
+                  <span class="dropdown-header">How can we help you?</span>
+                  <div>
+                    <div class="dropdown-contact">
+                      <img src="/BioTrust_Assets/NavBarIcon.png" />
+                      <div class="nonimg">
+                        <span class="contact-green-text">24/7 CHAT</span>
+                        <span class="contact-sub-text">
+                          Get help now from Aidan, your BioTRUST product expert
+                        </span>
+                        <button type="button" class="custom-button no-border">
+                          Chat Now
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <div class="dropdown-contact">
-                    <img src="/BioTrust_Assets/NavBarIcon.png" />
-                    <div class="nonimg">
-                      <span class="contact-green-text">Questions?</span>
-                      <span class="contact-sub-text">
-                        Get Answers by visiting the help center
-                      </span>
-                      <button type="button" class="custom-button no-border">
-                        Chat Now
-                      </button>
+                  <div>
+                    <div class="dropdown-contact">
+                      <img src="/BioTrust_Assets/NavBarIcon.png" />
+                      <div class="nonimg">
+                        <span class="contact-green-text">Questions?</span>
+                        <span class="contact-sub-text">
+                          Get Answers by visiting the help center
+                        </span>
+                        <button type="button" class="custom-button no-border">
+                          Chat Now
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -182,19 +231,56 @@
         </form> -->
       </div>
     </nav>
+    <!-- Page Body -->
     <div class="use-flex skeleton">
       <div class="images use-flex">
         <div class="carousel">
-          <img src="/BioTrust_Assets/flavors/unflavored.webp" onclick="switchMainImage(this)"/>
-          <img src="/BioTrust_Assets/flavors/fruitPunch.webp" onclick="switchMainImage(this)"/>
-          <img src="/BioTrust_Assets/flavors/chocolate.webp" onclick="switchMainImage(this)"/>
-          <img src="/BioTrust_Assets/flavors/vanilla.webp" onclick="switchMainImage(this)"/>
+          <img
+            src="/BioTrust_Assets/up-arrow.png"
+            id="prod-carousel-up-arrow"
+            onclick="scrollProdCarouselUp()" />
+          <div class="carousel-image-holder">
+            <img
+            src="/BioTrust_Assets/flavors/unflavored.webp"
+            id="prod-carousel-img-1"
+            onclick="switchMainImage(this)" />
+            </div>
+          <div class="carousel-image-holder">
+            <img
+            src="/BioTrust_Assets/flavors/fruitPunch.webp"
+            id="prod-carousel-img-2"
+            onclick="switchMainImage(this)" />
+            </div>
+          <div class="carousel-image-holder">
+            <img
+            src="/BioTrust_Assets/flavors/chocolate.webp"
+            id="prod-carousel-img-3"
+            onclick="switchMainImage(this)" />
+            </div>
+          <div class="carousel-image-holder">
+            <img
+            src="/BioTrust_Assets/flavors/vanilla.webp"
+            id="prod-carousel-img-4"
+            onclick="switchMainImage(this)" />
+            </div>
+          <div class="carousel-image-holder">
+            <img
+            src="/BioTrust_Assets/flavors/vanilla.webp"
+            id="prod-carousel-img-5"
+            onclick="switchMainImage(this)" />
+            </div>
+          <img
+            src="/BioTrust_Assets/down-arrow.png"
+            id="prod-carousel-down-arrow"
+            onclick="scrollProdCarouselDown()" />
         </div>
         <div class="product">
           <div class="name"></div>
           <div class="rating"></div>
           <div class="big-image">
-            <img id="carousel-big-img" src="/BioTrust_Assets/flavors/chocolate.webp"/>
+            <img
+              id="carousel-big-img"
+              src="/BioTrust_Assets/flavors/chocolate.webp" />
           </div>
         </div>
       </div>
