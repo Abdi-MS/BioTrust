@@ -1,8 +1,8 @@
-/* * {
+* {
   border-radius: 1px;
   border: solid;
   border-color: black;
-} */
+}
 
 .use-flex {
   display: flex;
@@ -214,7 +214,7 @@ textarea:focus {
 }
 
 .images {
-  width: 50%;
+  width: 47%;
   margin-left: 100px;
   height: 700px;
 }
@@ -281,6 +281,16 @@ textarea:focus {
   border-color: rgb(71, 71, 71);
 }
 
+
+.product .name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .name h2{
+  text-align: center;
+  color: #0d4f9a;
+}
 
 /* .dd-content-container{
   background: none;

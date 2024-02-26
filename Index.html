@@ -70,7 +70,7 @@
 
       function updateImageLinks() {
         for (var i = 0; i < 5; i++) {
-          var img = document.getElementById(`prod-carousel-img-${i+1}`);
+          var img = document.getElementById(`prod-carousel-img-${i + 1}`);
           console.log(img.src);
           var index = (prodCarouselCounter + i) % imgLinkArr.length;
           console.log("assigning image >>> ", imgLinkArr[index]);
@@ -241,47 +241,56 @@
             onclick="scrollProdCarouselUp()" />
           <div class="carousel-image-holder">
             <img
-            src="/BioTrust_Assets/flavors/unflavored.webp"
-            id="prod-carousel-img-1"
-            onclick="switchMainImage(this)" />
-            </div>
+              src="/BioTrust_Assets/flavors/unflavored.webp"
+              id="prod-carousel-img-1"
+              onclick="switchMainImage(this)" />
+          </div>
           <div class="carousel-image-holder">
             <img
-            src="/BioTrust_Assets/flavors/fruitPunch.webp"
-            id="prod-carousel-img-2"
-            onclick="switchMainImage(this)" />
-            </div>
+              src="/BioTrust_Assets/flavors/fruitPunch.webp"
+              id="prod-carousel-img-2"
+              onclick="switchMainImage(this)" />
+          </div>
           <div class="carousel-image-holder">
             <img
-            src="/BioTrust_Assets/flavors/chocolate.webp"
-            id="prod-carousel-img-3"
-            onclick="switchMainImage(this)" />
-            </div>
+              src="/BioTrust_Assets/flavors/chocolate.webp"
+              id="prod-carousel-img-3"
+              onclick="switchMainImage(this)" />
+          </div>
           <div class="carousel-image-holder">
             <img
-            src="/BioTrust_Assets/flavors/vanilla.webp"
-            id="prod-carousel-img-4"
-            onclick="switchMainImage(this)" />
-            </div>
+              src="/BioTrust_Assets/flavors/vanilla.webp"
+              id="prod-carousel-img-4"
+              onclick="switchMainImage(this)" />
+          </div>
           <div class="carousel-image-holder">
             <img
-            src="/BioTrust_Assets/flavors/vanilla.webp"
-            id="prod-carousel-img-5"
-            onclick="switchMainImage(this)" />
-            </div>
+              src="/BioTrust_Assets/flavors/vanilla.webp"
+              id="prod-carousel-img-5"
+              onclick="switchMainImage(this)" />
+          </div>
           <img
             src="/BioTrust_Assets/down-arrow.png"
             id="prod-carousel-down-arrow"
             onclick="scrollProdCarouselDown()" />
         </div>
         <div class="product">
-          <div class="name"></div>
-          <div class="rating"></div>
+          <div class="name">
+            <h2>AGELESS MULTI-COLLAGEN® PROTEIN POWDER</h2>
+          </div>
+          <div class="rating">
+
+          </div>
           <div class="big-image">
             <img
               id="carousel-big-img"
               src="/BioTrust_Assets/flavors/chocolate.webp" />
           </div>
+        </div>
+        <div class="packages">
+          <div class="package-choice-btns"></div>
+          <div class="package-options"></div>
+          <div class="customer-gallery"></div>
         </div>
       </div>
       <div class="Cards"></div>
