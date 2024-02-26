@@ -1,8 +1,8 @@
-* {
+/* * {
   border-radius: 1px;
   border: solid;
   border-color: black;
-}
+} */
 
 .use-flex {
   display: flex;
@@ -269,7 +269,7 @@ textarea:focus {
   opacity: 0.9;
 }
 
-.carousel-image-holder{
+.carousel-image-holder {
   width: 105px;
   height: 105px;
   display: flex;
@@ -281,18 +281,86 @@ textarea:focus {
   border-color: rgb(71, 71, 71);
 }
 
-
-.product .name{
+.product .name {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.product .name h2{
+.product .name h2 {
   text-align: center;
   color: #0d4f9a;
 }
 
-/* .dd-content-container{
-  background: none;
-  padding-right: 400px;
-} */
+.product .rating span {
+  text-align: center;
+  color: #0d4f9a;
+}
+
+.packages {
+  width: 600px;
+}
+
+.package-choice-btns {
+  height: 25%;
+}
+
+.package-options {
+  height: 40%;
+}
+
+.customer-gallery {
+  height: 35%;
+}
+
+.package-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.package-choice-btns {
+  display: flex;
+  gap: 40px;
+  align-content: center;
+  justify-content: center;
+}
+
+.package-choice h3 {
+  text-align: center;
+  font-style: solid;
+  color: #0d4f9a;
+}
+
+.package-choice-text span {
+  text-align: center;
+  font-size: small;
+}
+
+.package-choice-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 10px;
+  gap: 0px;
+}
+
+.package-choice-btn{
+  padding: 5px 40px;
+  border: 2px solid #0d4f9a;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Transition effect for hover */
+}
+
+#left-btn{
+  background-color: white;
+  color: #0d4f9a;
+}
+
+#right-btn{
+  background-color: #0d4f9a;
+  color: white;
+}
+
