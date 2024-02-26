@@ -16,9 +16,13 @@
   display: block;
 }
 
-/* .skeleton *{
-  height: 400px;
-  width: 200px;
+.wrap-flex{
+  flex-wrap: wrap;
+}
+
+/* 
+.skeleton {
+  flex-wrap: wrap;
 } */
 
 .right-half {
@@ -319,7 +323,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: space-between;
+  align-content: center;
 }
 
 .package-choice-btns {
@@ -427,14 +431,13 @@ textarea:focus {
 }
 
 .offer .shipping {
-  font-size: 22px;
+  font-size: 18px;
   color: black;
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
 
 .flavor-btn {
-  margin-left: 24%;
   margin-top: 7px;
   margin-bottom: 7px;
   background-color: #2bb34d;
@@ -456,4 +459,10 @@ textarea:focus {
   color: white;
   font-weight: bold;
   padding: 0 10px; /* Optional: add padding for better presentation */
+}
+
+.offer-flavor-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
