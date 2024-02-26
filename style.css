@@ -4,6 +4,10 @@
   border-color: black;
 } */
 
+.margin-wrapper {
+  margin: 20px 0px;
+}
+
 .use-flex {
   display: flex;
 }
@@ -52,7 +56,7 @@
   color: white;
 }
 
-nonimg button {
+.nonimg button {
   margin-top: 5px;
 }
 
@@ -214,7 +218,7 @@ textarea:focus {
 }
 
 .images {
-  width: 47%;
+  flex-grow: 0;
   margin-left: 100px;
   height: 700px;
 }
@@ -270,15 +274,18 @@ textarea:focus {
 }
 
 .carousel-image-holder {
+  opacity: 0.7;
   width: 105px;
   height: 105px;
   display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 15px;
-  border-top-width: 12px;
-  border-bottom-width: 1px;
-  border-color: rgb(71, 71, 71);
+  border: 1px solid rgb(197, 197, 197);
+}
+
+.carousel-image-holder:hover{
+  opacity: 1.0;
 }
 
 .product .name {
@@ -297,15 +304,11 @@ textarea:focus {
 }
 
 .packages {
-  width: 600px;
+  flex-grow: 1;
 }
 
 .package-choice-btns {
   height: 25%;
-}
-
-.package-options {
-  height: 40%;
 }
 
 .customer-gallery {
@@ -346,7 +349,7 @@ textarea:focus {
   gap: 0px;
 }
 
-.package-choice-btn{
+.package-choice-btn {
   padding: 5px 40px;
   border: 2px solid #0d4f9a;
   font-size: 16px;
@@ -354,13 +357,103 @@ textarea:focus {
   transition: all 0.3s ease; /* Transition effect for hover */
 }
 
-#left-btn{
+#left-btn {
   background-color: white;
   color: #0d4f9a;
 }
 
-#right-btn{
+#right-btn {
   background-color: #0d4f9a;
   color: white;
 }
 
+.package-options {
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.package-options .offer {
+  display: block;
+  height: max-content;
+  width: 28%;
+  border: 2px solid #0d4f9a;
+}
+
+.popular-offer {
+  border: 7px solid #0d4f9a !important;
+  border-top-width: 24px !important;
+}
+
+.offer span {
+  display: block;
+  text-align: center;
+}
+
+.offer .head1 {
+  font-size: 30px;
+  color: #0d4f9a;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+}
+
+.offer .head2 {
+  font-size: 24px;
+  color: #0d4f9a;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+.offer .price-cancelled {
+  font-size: 30px;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.offer .price-actual {
+  font-size: 30px;
+  color: #2bb34d;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+}
+
+.offer .savings {
+  font-size: 24px;
+  color: red;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.offer .shipping {
+  font-size: 22px;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.flavor-btn {
+  margin-left: 24%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: #2bb34d;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+.popular-offer::before {
+  content: "Most Popular";
+  position: absolute;
+  top: 31.5%; /* Adjust as needed to position the text */
+  left: 51.5%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  background: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px; /* Optional: add padding for better presentation */
+}
