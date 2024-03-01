@@ -64,6 +64,15 @@
   color: white;
 }
 
+#left-navbar-link{
+  color: white;
+  padding: 2px 8px;
+}
+
+#left-navbar-link:hover{
+  color: #579ad1;
+}
+
 .nonimg button {
   margin-top: 5px;
 }
